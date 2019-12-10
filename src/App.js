@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AddButton from './AddButton.js'
+import TestButton from './TestButton.js'
 
 class App extends React.Component {
   state = {
@@ -38,7 +40,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
-        <h2>Shopping List</h2>
+        <h2>Shopping List yeah?</h2>
         <form onSubmit={this.addItem}>
           <input
             type="text"
@@ -46,7 +48,8 @@ class App extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           />
-          <button disabled={this.inputIsEmpty()}>Add</button>
+          {/*<button disabled={this.inputIsEmpty()}>Add</button>*/}
+          <AddButton/>
         </form>
 
         <button onClick={this.deleteLastItem} disabled={this.noItemsFound()}>
