@@ -25,8 +25,14 @@ class App extends React.Component {
     this.setState(prevState => ({ items: this.state.items.slice(0, -1) }));
   };
 
-  inputIsEmpty = () => {
+  inputIsEmpty2 = () => {
     return this.state.value === '';
+  };
+
+  testFunction = () => {
+    if (true) {
+      return false;
+    }
   };
 
   noItemsFound = () => {
@@ -48,8 +54,9 @@ class App extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           />
-          {/*<button disabled={this.inputIsEmpty()}>Add</button>*/}
-          <AddButton/>
+          {/*<button disabled={this.inputIsEmpty()}>Add</button>/*}
+          {/*<AddButton/>*/}
+          <AddButton inputIsEmpty2 = {this.testFunction} />
         </form>
 
         <button onClick={this.deleteLastItem} disabled={this.noItemsFound()}>
