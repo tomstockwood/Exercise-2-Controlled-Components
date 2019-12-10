@@ -2,17 +2,23 @@ import React, { Component} from 'react'
 
 class AddButton extends React.Component{
     
-    inputIsEmpty = this.props.inputIsEmpty2
+    A = this.props.testFunction();
     
-    testFunction = () => {
-          return true
+    inputIsEmpty = () => {
+        return this.props.value === '';
+        //return true;
+      };
+    
+    B = () => {
+        return true;
       };
 
     render() {
         return (
             <div>
-            <button disabled={this.testFunction()}>Add</button>
+            <button disabled={this.inputIsEmpty()}>Add</button>
             <p> Hello world </p>
+            <p> The value is {this.props.value} xx</p>
             </div>
         )
     }

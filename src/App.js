@@ -25,14 +25,12 @@ class App extends React.Component {
     this.setState(prevState => ({ items: this.state.items.slice(0, -1) }));
   };
 
-  inputIsEmpty2 = () => {
+  inputIsEmpty = () => {
     return this.state.value === '';
   };
 
   testFunction = () => {
-    if (true) {
-      return false;
-    }
+    return true;
   };
 
   noItemsFound = () => {
@@ -46,7 +44,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
-        <h2>Shopping List yeah?</h2>
+        <h2>Shopping List yeah!</h2>
         <form onSubmit={this.addItem}>
           <input
             type="text"
@@ -56,7 +54,7 @@ class App extends React.Component {
           />
           {/*<button disabled={this.inputIsEmpty()}>Add</button>/*}
           {/*<AddButton/>*/}
-          <AddButton inputIsEmpty2 = {this.testFunction} />
+          <AddButton testFunction = {this.testFunction} value = {this.state.value}/>
         </form>
 
         <button onClick={this.deleteLastItem} disabled={this.noItemsFound()}>
