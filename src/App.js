@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import AddButton from './AddButton.js'
 import TestButton from './TestButton.js'
+import EnterText from './EnterText.js'
+import DeleteButton from './DeleteButton.js'
 
 class App extends React.Component {
   state = {
@@ -44,22 +46,28 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
-        <h2>Shopping List yeah!</h2>
-        <form onSubmit={this.addItem}>
+        <h2>Shopping List yeah!?</h2>
+        <EnterText
+          value={this.state.value}
+          handleChange={this.handleChange}
+          addItem={this.addItem}
+        />
+        {/* <form onSubmit={this.addItem}>
           <input
             type="text"
             placeholder="Enter New Item"
             value={this.state.value}
             onChange={this.handleChange}
-          />
-          {/*<button disabled={this.inputIsEmpty()}>Add</button>/*}
-          {/*<AddButton/>*/}
-          <AddButton testFunction = {this.testFunction} value = {this.state.value}/>
-        </form>
+          /> */}
+          {/*<button disabled={this.inputIsEmpty()}>Add</button>*/}
+          {/* <AddButton value = {this.state.value}/> */}
+        {/* </form> */}
 
         <button onClick={this.deleteLastItem} disabled={this.noItemsFound()}>
           Delete Last Item
         </button>
+
+        {/* <DeleteButton deleteLastItem = {this.deleteLastItem} noItemsFound = {this.noItemsFound}/> */}
 
         <p className="items">Items</p>
         <ol className="item-list">
