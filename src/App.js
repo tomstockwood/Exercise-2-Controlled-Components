@@ -5,6 +5,7 @@ import AddButton from './AddButton.js'
 import TestButton from './TestButton.js'
 import EnterText from './EnterText.js'
 import DeleteButton from './DeleteButton.js'
+import GenericButton from './GenericButton.js'
 
 class App extends React.Component {
   state = {
@@ -67,10 +68,18 @@ class App extends React.Component {
           {/* Delete Last Item */}
         {/* </button> */}
 
-        <DeleteButton 
+        {/* <DeleteButton 
           deleteLastItem={this.deleteLastItem}
           disabled={this.state.items.length === 0}
-        />
+        /> */}
+
+        <GenericButton 
+          deleteLastItem={this.deleteLastItem}
+          disabled={this.state.items.length === 0}
+        >
+          Delete Last Item
+        </GenericButton>
+          
 
         <p className="items">Items</p>
         <ol className="item-list">
