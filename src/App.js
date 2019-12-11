@@ -6,6 +6,8 @@ import TestButton from './TestButton.js'
 import EnterText from './EnterText.js'
 import DeleteButton from './DeleteButton.js'
 import GenericButton from './GenericButton.js'
+import ItemList from './ItemList.js'
+
 
 class App extends React.Component {
   state = {
@@ -79,12 +81,16 @@ class App extends React.Component {
         >
           Delete Last Item
         </GenericButton>
-          
+         
+        <ItemList
+          items = {this.state.items}
+        >
+        </ItemList>
 
-        <p className="items">Items</p>
+        {/* <p className="items">Items</p>
         <ol className="item-list">
           {this.state.items.map((item, index) => <li key={index}>{item}</li>)}
-        </ol>
+        </ol> */}
       </div>
     );
   }
