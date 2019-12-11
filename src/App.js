@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AddButton from './AddButton.js'
+//import AddButton from './AddButton.js'
 import TestButton from './TestButton.js'
 import EnterText from './EnterText.js'
-import DeleteButton from './DeleteButton.js'
+//import DeleteButton from './DeleteButton.js'
 import GenericButton from './GenericButton.js'
 import ItemList from './ItemList.js'
 
