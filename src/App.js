@@ -49,7 +49,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
-        <h2>Shopping List yeah!?</h2>
+        <h2>Shopping List</h2>
         <EnterText
           value={this.state.value}
           handleChange={this.handleChange}
@@ -81,7 +81,10 @@ class App extends React.Component {
         >
           Delete Last Item
         </GenericButton>
-         
+        
+        <TestButton>
+        </TestButton>
+
         <ItemList
           items = {this.state.items}
         >
