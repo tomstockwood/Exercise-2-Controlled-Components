@@ -81,9 +81,6 @@ class App extends React.Component {
         >
           Delete Last Item
         </GenericButton>
-        
-        <TestButton>
-        </TestButton>
 
         <ItemList
           items = {this.state.items}
