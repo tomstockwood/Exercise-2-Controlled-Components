@@ -63,11 +63,14 @@ class App extends React.Component {
           {/* <AddButton value = {this.state.value}/> */}
         {/* </form> */}
 
-        <button onClick={this.deleteLastItem} disabled={this.noItemsFound()}>
-          Delete Last Item
-        </button>
+        {/* <button onClick={this.deleteLastItem} disabled={this.noItemsFound}> */}
+          {/* Delete Last Item */}
+        {/* </button> */}
 
-        {/* <DeleteButton deleteLastItem = {this.deleteLastItem} noItemsFound = {this.noItemsFound}/> */}
+        <DeleteButton 
+          deleteLastItem={this.deleteLastItem}
+          disabled={this.state.items.length === 0}
+        />
 
         <p className="items">Items</p>
         <ol className="item-list">
